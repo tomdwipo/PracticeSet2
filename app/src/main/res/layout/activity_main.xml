@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:weightSum="1">
 
     <TextView
         android:id="@+id/display_text_view"
@@ -23,11 +24,37 @@
         android:text=""
         android:textSize="45sp" />
 
+
     <TextView
         android:id="@+id/display_text_view_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:textSize="45sp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/coba"
+        android:width="125dp"
+        android:height="50dp"
+        android:textSize="30sp"
+        android:hint="Enter Your Name"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your name"
+        android:id="@+id/buttonID"
+        android:layout_gravity="center_horizontal" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/textViewID"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>

@@ -2,30 +2,49 @@ package com.example.android.practiceset2;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private EditText myedittext;
+    private TextView showMyText;
+    private Button showbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // PASTE CODE YOU WANT TO TEST HERE
+        myedittext = (EditText)findViewById(R.id.coba);
+        showMyText = (TextView)findViewById(R.id.textViewID);
+        showbutton = (Button)findViewById(R.id.buttonID);
 
-        int raspberryPrice = 5;
-        display1("1 box: $" + raspberryPrice);
-        raspberryPrice = 10;
-        display2("2 boxes: $" + (raspberryPrice));
-        display3("3 boxes: $" + (raspberryPrice * 3));
+        showbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String myname;
+                myname = myedittext.getText().toString();
+                showMyText.setText(myname);
+            }
+        });
 
-        int weekday = 5;
-        int weekend = 9;
-        int optimalHours = 7 * 8;
 
-        int actualHours = weekday;
-        actualHours = actualHours + weekend * 2;
-        int solution = optimalHours - actualHours;
-        display(solution);
+
+       // int raspberryPrice = 5;
+        //display1("1 box: $" + raspberryPrice);
+       // raspberryPrice = 10;
+       // display2("2 boxes: $" + (raspberryPrice));
+        //display3("3 boxes: $" + (raspberryPrice * 3));
+
+        //int weekday = 5;
+       // int weekend = 9;
+       // int optimalHours = 7 * 8;
+
+//        int actualHours = weekday;
+  //      actualHours = actualHours + weekend * 2;
+    //    int solution = optimalHours - actualHours;
+      //  display(solution);
     }
 
     /**
